@@ -15,7 +15,7 @@ public class GuessSecretNumber
               Console.WriteLine("You have only 5 chances to guess a secret number");
               Console.WriteLine("Can you guess it?");
               
-             while (count < numberofAttempt){
+             do{
             Console.Write("Guess a secret number:");
               int guessNumber = Convert.ToInt32(Console.ReadLine());
               if(guessNumbers.Contains(guessNumber)){
@@ -44,6 +44,7 @@ public class GuessSecretNumber
 
 
             }
+            while (count < numberofAttempt);
                 Console.WriteLine($"You made {guessNumbers.Count} number of Guesses. Play again :)");
             
     }
